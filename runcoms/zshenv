@@ -13,13 +13,17 @@ if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
 fi
 
+BROWSER='uzbl-browser'
+
 #
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='vim'
+export VISUAL='vim'
 export PAGER='less'
+export SUDO_EDITOR='vim -f'
+export GIT_EDITOR='vim -f'
 
 #
 # Language
@@ -43,6 +47,12 @@ typeset -gU cdpath fpath mailpath path
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
+  $HOME/.rbenv/shims
+  $HOME/.rbenv/bin
+  /usr/bin/vendor_perl
+  $HOME/dev/scripts
+  $HOME/.cabal/bin
+  $HOME/remindwhen
   $path
 )
 
