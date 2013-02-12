@@ -34,6 +34,7 @@ zstyle ':prezto:load' pmodule \
   'prompt' \
   'archive' \
   'ssh-agent' \
+  'ruby' \
   'git'
 
 #
