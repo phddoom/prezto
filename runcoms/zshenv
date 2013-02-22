@@ -59,11 +59,12 @@ path=(
   $HOME/.rbenv/shims
   $HOME/.rbenv/bin
   /usr/bin/vendor_perl
-  $HOME/dev/scripts
+  $HOME/dev/scripts/bin
   $HOME/.cabal/bin
   $HOME/remindwhen
   $path
 )
+export PATH
 
 #
 # Less
