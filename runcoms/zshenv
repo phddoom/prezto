@@ -62,6 +62,7 @@ path=(
   $HOME/.rbenv/shims
   $HOME/.rbenv/bin
   /usr/bin/vendor_perl
+  /usr/bin/core_perl
   $HOME/dev/scripts/bin
   $HOME/.cabal/bin
   $HOME/remindwhen
