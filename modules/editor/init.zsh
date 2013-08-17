@@ -45,7 +45,10 @@
 if [[ "$TERM" == 'dumb' ]]; then
   return 1
 fi
-
+autoload up-line-or-beginning-search
+autoload down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
 #
 # Options
 #
@@ -327,6 +330,10 @@ for keymap in 'emacs' 'viins'; do
 
   # Insert 'sudo ' at the beginning of the line.
   bindkey -M "$keymap" "$key_info[Control]X$key_info[Control]S" prepend-sudo
+
+  # history search based on current input
+  bindkey -M "$keymap" "$key_info[Up]" up-line-or-beginning-search
+  bindkey -M "$keymap" "$key_info[Down]" down-line-or-beginning-search
 done
 
 # Do not expand .... to ../.. during incremental search.
